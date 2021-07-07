@@ -1,5 +1,5 @@
 # Dogecoin-Assignment
-# Steps:
+# Steps and roadblocks:
 I was unable to setup the dogecoin cli due to Macbook M1 issues, I was able to install homebrew successfully but when I tried to install the dependencies using homebrew I got the following error:
 Cannot install under Rosetta 2 in ARM default prefix (/opt/homebrew)!
 To rerun under ARM use:
