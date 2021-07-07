@@ -8,7 +8,7 @@ To install under x86_64, install Homebrew into /usr/local.
 
 And when I looked at this issue I found a solution that I need to install Rosetta first before running the homebrew commands but when I tried to install Rosetta, I got the following error: Installing Rosetta 2 on this system is not supported. So I discussed this with Arslan rao and told him that I have asked Maaz to send me a laptop, in the meanwhile I will pair up with Minahil to setup the cli locally.
 
-Now, I have installed the dogecoin release to test the commands. Hassan helped me in setting up the testnet environment on the release. We can set the environment by using the following commands, first we have to go to following path: cd /Applications/Dogecoin-Qt.app/Contents/MacOS
+Now, I have installed the dogecoin release by using this link: https://dogecoin.com/#wallets to test the commands. Hassan helped me in setting up the testnet environment on the release. We can set the environment by using the following commands, first we have to go to following path: cd /Applications/Dogecoin-Qt.app/Contents/MacOS
 And then we can enable testnet by running the following command:
 ./Dogecoin-Qt --testnet
 
