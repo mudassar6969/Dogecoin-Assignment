@@ -20,9 +20,9 @@ It will run dogecoin client in testnet environment, you can then run the command
 Testnet data is completely synced now, I can see the recent transactions and my upto date balance.
 
 # Get Address
-Command: getaccountaddress ""
+Command: getaccountaddress "mudassar"
 
-Output: ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt
+Output: nUqLeCHjwFeJ4V4chHhoSzo2apuVTx3Ltj
 
 # Get Account Balance
 Command: getbalance "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
