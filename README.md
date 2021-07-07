@@ -20,52 +20,51 @@ It will run dogecoin client in testnet environment, you can then run the command
 Testnet data is completely synced now, I can see the recent transactions and my upto date balance.
 
 ### Get Address
-Command: getaccountaddress "mudassar"
+> Command: getaccountaddress "mudassar"
 
-Output: nUqLeCHjwFeJ4V4chHhoSzo2apuVTx3Ltj
+> Output: nUqLeCHjwFeJ4V4chHhoSzo2apuVTx3Ltj
 
 ### Get Account Balance
-Command: getbalance "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
+> Command: getbalance "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
 
-Output: 0.00000000
+> Output: 0.00000000
 
 ### Create Account in Wallet
-Command: getnewaddress "mudassar"
+> Command: getnewaddress "mudassar"
 
-Output: nqeCH4CtveUzBdRWjLrc24W3NN1Hjs8Wom
+> Output: nqeCH4CtveUzBdRWjLrc24W3NN1Hjs8Wom
 
 ### Raw Transactions
 Use the following command to create a raw transaction:
 
-Command: createrawtransaction '[{"txid":"30f6e7af32d976d7fc6d11ca762d03c1c4ef3844851df9239e5774350b5df929","vout":1}]' '{"ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt":12.5}'
+> Command: createrawtransaction '[{"txid":"30f6e7af32d976d7fc6d11ca762d03c1c4ef3844851df9239e5774350b5df929","vout":1}]' '{"ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt":12.5}'
 
-Output: 010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f6300100000000ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000
+> Output: 010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f6300100000000ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000
 
 Now sign this raw transaction by using the following command:
 
-Command: signrawtransaction "010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f6300100000000ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000"
+> Command: signrawtransaction "010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f6300100000000ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000"
 
-Output: {
+> Output: {
  "hex": "010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f630010000006b4830450221008eb88523ccb1dfe9acee615c017d28601d4980c0850de94a06f9b1fe8d6a173d02204ff78baaa0aa0ad9d60df77e90781dbc3f201459bed32558930d6dd32990698a0121032898a0b743c3bc117b517bd6b2d37607c20abf3852ef143c31940d0d96520913ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000",
  "complete": true
 }
 
 Now send the transaction by using this command:
 
-Command: sendrawtransaction "010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f630010000006b4830450221008eb88523ccb1dfe9acee615c017d28601d4980c0850de94a06f9b1fe8d6a173d02204ff78baaa0aa0ad9d60df77e90781dbc3f201459bed32558930d6dd32990698a0121032898a0b743c3bc117b517bd6b2d37607c20abf3852ef143c31940d0d96520913ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000"
+> Command: sendrawtransaction "010000000129f95d0b3574579e23f91d854438efc4c1032d76ca116dfcd776d932afe7f630010000006b4830450221008eb88523ccb1dfe9acee615c017d28601d4980c0850de94a06f9b1fe8d6a173d02204ff78baaa0aa0ad9d60df77e90781dbc3f201459bed32558930d6dd32990698a0121032898a0b743c3bc117b517bd6b2d37607c20abf3852ef143c31940d0d96520913ffffffff01807c814a000000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000"
 
-Output: e2895daba1a209fbd63f6f86e56f13b015f166c5723a140c212b80face738b9e
+> Output: e2895daba1a209fbd63f6f86e56f13b015f166c5723a140c212b80face738b9e
 
 
 ### Get Public Key / Private Key / Address
 I have already listed the command to get the address.
+
 Now to get the public key from address:
 
-Command: validateaddress "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
+> Command: validateaddress "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
 
-Output: 
-
-{
+> Output: {
  "isvalid": true,
  "address": "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt",
  "scriptPubKey": "76a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac",
@@ -84,8 +83,9 @@ This will contain the public key.
 
 To get the private key, the following command is used:
 
-Command: dumpprivkey "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
-Output: cijphevhyJSBNhLUo9iff9LWxxjjooip8oJEWwknv7ZCvvobRZca
+> Command: dumpprivkey "ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt"
+
+> Output: cijphevhyJSBNhLUo9iff9LWxxjjooip8oJEWwknv7ZCvvobRZca
 
 ### Get Faucet
 For testnet I have used this website: https://shibe.technology/ to get the dogecoins
