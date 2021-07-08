@@ -91,3 +91,7 @@ To get the private key, the following command is used:
 For testnet I have used this website: https://shibe.technology/ to get the dogecoins
 
 For mainnet we can use this website: https://www.dogefaucet.com/en 
+
+
+# Postman Collection
+https://www.getpostman.com/collections/8900480dc5468d30c6cb
