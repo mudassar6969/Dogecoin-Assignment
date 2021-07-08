@@ -1,0 +1,211 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Dogecoin-Requests",
+		"_postman_id": "6b924a28-24cf-5af6-a0bf-f14f48e2f2d5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Balance",
+			"request": {
+				"url": "http://127.0.0.1:44555/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\": \"1.0\",\n\t\"id\": \"abc\",\n\t\"method\": \"getbalance\",\n\t\"params\": []\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Address",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"getaccountaddress\",\n\t\"params\": [\"mudassar\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Account",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"getnewaddress\",\n\t\"params\": [\"abc\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Raw Transaction",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\": \"1.0\",\n\t\"id\":\"curltest\",\n\t\"method\": \"createrawtransaction\",\n\t\"params\":[[{\"txid\":\"84c6f6ff7d6b31edf8f58a8c9eff2d1d42aa2981fe353b5aeea55c29d9460051\",\"vout\":0}],{\"ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt\":90}]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Raw Transaction",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"signrawtransaction\",\n\t\"params\": [\"0100000001510046d9295ca5ee5a3b35fe8129aa421d2dff9e8c8af5f8ed316b7dfff6c6840000000000ffffffff01001a7118020000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Raw Transaction",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"sendrawtransaction\",\n\t\"params\": [\"0100000001510046d9295ca5ee5a3b35fe8129aa421d2dff9e8c8af5f8ed316b7dfff6c684000000006a47304402200b84ebb7ccfbbb72f9e91022184aa4d3d8c2ef94bc148a0aced325ba52c741c0022053a2c707dfd7d2ca69de3b2de54d388ca68c984ceb2ddc6f22e466d65668c6f50121032898a0b743c3bc117b517bd6b2d37607c20abf3852ef143c31940d0d96520913ffffffff01001a7118020000001976a914830be3b98b1d091e905e80678224eb59a9b2a5e188ac00000000\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Public Key",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"validateaddress\",\n\t\"params\": [\"ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Private Key",
+			"request": {
+				"url": "{{base_url}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZG9nZWNvaW5ycGM6NDIyYTA1YzA1YTg5ODk4YmNmOTc0MzVmMWEwMDZhOGQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"dumpprivkey\",\n\t\"params\": [\"ng952W2wBvqvyagMHsy8NKmtPkqmJFYBnt\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
